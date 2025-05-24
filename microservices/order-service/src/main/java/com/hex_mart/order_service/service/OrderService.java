@@ -3,6 +3,7 @@ package com.hex_mart.order_service.service;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.hex_mart.order_service.dto.OrderLineItemsDto;
 import com.hex_mart.order_service.dto.OrderRequest;
@@ -14,6 +15,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class OrderService {
 
     private final OrderRepository orderRepository;
